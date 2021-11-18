@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Produtcts Card</title>
+</head>
+<style>
+* {
+  margin:0;
+  padding : 0;
+  box-sizing:border-box;
+}
+.container{
+  width: 90%;
+  margin:0 auto;
+  padding: 2rem;
+  background:#e2e8f0;
+}
+img{
+  width:100%;
+}
+.cards{
+  display:flex;
+  width:100%;
+  flex-wrap:wrap;
+  justify-content:space-evenly;
+  
+  font-family:sans-serif;
+}
+.cards .card{
+  width:30%;
+  padding:1rem;
+  min-width:280px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px 0px;
+  background:white;
+  margin:1rem 0;
+}
+.cards .card h1{
+  font-size:1.1rem;
+  margin:1rem 0;
+}
+.cards .card p{
+  display:none;
+}
+.cards .card button{
+  margin:1rem 0;
+  padding:.3rem .6rem;
+  border:0;
+  background:#c53030;
+  color:white;
+  cursor:pointer;
+}
+.cards .card:last-child{
+   align-items:flex-start;
+}
+.cards .card img{
+transform: scale(.9);
+transition:.3s;
+}
+.cards .card img:hover{
+ 
+  transform: scale(1);
+  transition-timing-function:ease-in-out;
+}
+
+</style>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="cards">
+        <div class="card">
+          <img src="https://df17fp68uwcso.cloudfront.net/eyJidWNrZXQiOiJtZWRpYS5ldmFseS5jb20uYmQiLCJrZXkiOiJtZWRpYS9pbWFnZXMvMTJhMWFlMGJmM2I3LWhlcm8tcGFzc2lvbi14LXByby0xMTBjYy1kcnVtLWJyYWtlLW1vdG9yY3ljbGUtc3BvcnRzLXJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsImZpdCI6ImNvbnRhaW4ifSwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX0sImZsYXR0ZW4iOnRydWUsImpwZWciOnsicXVhbGl0eSI6MTAwfX19" alt="Product">
+          <div class="">
+            <h1>Hero Passion-X-Pro 110CC Motorcycle - Drum Brake </h1>
+            <p class="product-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis itaque hic ipsam. </p>
+            <div class="price"> $99.88 </div>
+            <button class="buy-now"> Buy Now</button>
+          </div>
+          </div>
+
+          <div class="card">
+            <img src="https://df17fp68uwcso.cloudfront.net/eyJidWNrZXQiOiJtZWRpYS5ldmFseS5jb20uYmQiLCJrZXkiOiJtZWRpYS9pbWFnZXMvZDQwZjNiYzlkYmI2LWJhamFqLXB1bHNhci1uczE2MC1hYnMucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJmaXQiOiJjb250YWluIn0sImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9LCJmbGF0dGVuIjp0cnVlLCJqcGVnIjp7InF1YWxpdHkiOjEwMH19fQ==" alt="Product">
+            <div class="">
+              <h1>Hero Passion-X-Pro 110CC Motorcycle - Drum Brake </h1>
+              <p class="product-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis itaque hic ipsam. </p>
+              <div class="" style="text-decoration:line-through;"> $99.88 </div>
+ 	      <div class="price"> $99.88 </div>
+              <button class="buy-now"> Buy Now</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://df17fp68uwcso.cloudfront.net/eyJidWNrZXQiOiJtZWRpYS5ldmFseS5jb20uYmQiLCJrZXkiOiJtZWRpYS9pbWFnZXMvYjA4NTdjM2ViOTIxLWNici0yLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwiZml0IjoiY29udGFpbiJ9LCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfSwiZmxhdHRlbiI6dHJ1ZSwianBlZyI6eyJxdWFsaXR5IjoxMDB9fX0=" alt="Product">
+            <div class="">
+              <h1>Honda CBR150R ABS Motor Bike - 149 cc - Black </h1>
+              <p class="product-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis itaque hic ipsam. </p>
+              <div class="price"> $99.88 </div>
+              <button class="buy-now"> Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
