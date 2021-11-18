@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Events</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #container {
+        width: 400px;
+        margin: 50px auto;
+    }
+    .input-section{
+        width: 100%;
+        display: flex;
+        background: rgb(214, 203, 203);
+        padding: 10px;
+        justify-content:space-between;
+    }
+    .input-section input{
+        flex-grow: 1;
+        padding: 10px;
+    }
+    ul {
+
+        width: 100%;
+        background: darkgrey;
+        padding: 20px;
+        list-style: none;
+    }
+
+    li {
+        font-size: 18px;
+        border-bottom: 1px solid gray;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li:hover {
+        background: rgb(145, 136, 125);
+        color: white;
+    }
+
+    li button {
+        background: red;
+        color: white;
+        align-self: flex-start;
+    }
+</style>
+
+<body>
+
+    <div id="container">
+        <h1>Todo List</h1>
+       <div class="input-section">
+        <input type="text" id="todo">
+        <input type="submit" id="submit">
+
+       </div>
+        <ul id="mylist">
+            <li id="first">Lorem ipsum dolor sit amet. <button>X</button></li>
+            <li>In culpa aliquid velit a. <button>X</button></li>
+            <li>In sint aliquam fugiat commodi. <button>X</button></li>
+            <li>Minus quos ipsam vitae cum. <button>X</button></li>
+            <li>Tempore ex optio cumque. Fugiat! <button>X</button></li>
+            <li>Suscipit debitis nihil perferendis reiciendis. <button>X</button></li>
+        </ul>
+    </div>
+    <script>
+
+        let todo, submit, li, liText
+        todo = document.getElementById("todo")
+        submit = document.getElementById("submit")
+
+        submit.onclick = function () {
+            if (todo.value) {
+                liText = document.createTextNode(todo.value)
+                cross = document.createElement("button")
+                cross.innerHTML = "X";
+                li = document.createElement("li")
+
+                li.appendChild(liText)
+                li.appendChild(cross)
+
+                document.getElementById("mylist").prepend(li)
+                todo.value = ''
+                todo.style.borderColor = "black"
+                refresh()
+                todo.placeholder = ""
+                todo.style.borderColor = ""
+            } else {
+                todo.placeholder = "Enter Value"
+                todo.style.borderColor = "red"
+            }
+        }
+
+        // Remove To Do Items
+        function refresh() {
+            const list = document.querySelectorAll('#mylist li button')
+            for (let i = 0; i < list.length; i++) {
+
+                const element = list[i];
+                element.addEventListener("click", function () {
+                    // event.target.remove(event.target)
+                    event.target.parentNode.remove(event.target)
+                    // event.target.parentNode.parentNode.removeChild(event.target.parentNode)
+                })
+            }
+        }
+
+        refresh()
+
+
+
+
+    </script>
+</body>
+
+</html>
